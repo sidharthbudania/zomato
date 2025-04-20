@@ -3,7 +3,9 @@ import uuid
 from pinecone import Pinecone
 from sentence_transformers import SentenceTransformer
 
-api_key = "pcsk_74oKf6_AFP3V6cfT1xGabL1zJjUAx6fyK9qjm97as5izv64zj4yzHRmjPAG93FFy4bm7kb"
+key=os.getenv("PINECONE_API_KEY")
+
+api_key = key
 index_name = "zomato"
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
