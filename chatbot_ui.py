@@ -11,7 +11,8 @@ embed_model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 generator = pipeline("text2text-generation", model="google/flan-t5-large")
 spell = SpellChecker()
 
-pc = Pinecone(api_key="pcsk_6g2xEN_D9LVKCQgFYtrVorReLXaRBfFgLm4YbNVLzyndYfQ5Vs7ZabKbJxt62SVZEoujB3")
+key=os.getenv("PINECONE_API_KEY")
+pc = Pinecone(api_key=key)
 index_name = "zomato"
 
 
